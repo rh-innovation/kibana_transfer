@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      maven: 3.5.6
+  pre_build:
+    commands:
+      - mvn install
+  build:
+    commands:
+      cd target java -jar kibana-0.0.1-SNAPSHOT.jar
+cache:
+  paths:
+    - 'src/**/*'
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'src/'

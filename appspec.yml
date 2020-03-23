@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/api/
+hooks:
+  BeforeInstall:
+    - location: scripts/app_beforeinstall.sh
+      runas: root
+      timeout: 60
+  ApplicationStart:
+    - location: scripts/app_start.sh
+      runas: root
+      timeout: 60
