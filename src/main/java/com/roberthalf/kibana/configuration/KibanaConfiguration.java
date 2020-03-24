@@ -25,7 +25,7 @@ public class KibanaConfiguration {
     @Value("${kibana.url.source:http://__localhost:8090/api/saved_objects/_export}")
     String srcUrl;
 
-    //dev kibana
+    //dev kibana 
     @Value("${kibana.url.desc:http://localhost:8080/api/saved_objects/_import}")
     String destUrl;
 
