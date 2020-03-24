@@ -38,10 +38,10 @@ public class TransferObjects {
     public void transferIndexPattern() throws Exception {
 
         //export from prod
-        String response = postService(config.getProdUrl(), KibanaObject.INDEX_PATTERN);
+        String response = postService(config.getSrcUrl(), KibanaObject.INDEX_PATTERN);
         log.debug(response);
         //import into dev
-        response = postService(config.getDevUrl(), response);
+        response = postService(config.getDestUrl(), response);
         log.debug(response);
 
     }
