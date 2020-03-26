@@ -7,4 +7,4 @@ spring:
 kibana:
   url:
     source:http://_localhost:8090/api/saved_objects/_export
-    desc:http://_localhost:8080/api/saved_objects/_import
+    dest:http://_localhost:8080/api/saved_objects/_import

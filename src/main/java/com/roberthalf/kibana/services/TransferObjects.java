@@ -35,13 +35,13 @@ public class TransferObjects {
     @Autowired
     KibanaConfiguration config;
 
-    public void transferIndexPattern() throws Exception {
+    public void transferIndexPattern(String kibanaSrc, String kibanaDest) throws Exception {
 
         //export from prod
-        String response = postService(config.getSrcUrl(), KibanaObject.INDEX_PATTERN);
+        String response = postService(kibanaSrc, KibanaObject.INDEX_PATTERN);
         log.debug(response);
         //import into dev
-        response = postService(config.getDestUrl(), response);
+        response = postService(kibanaDest, response);
         log.debug(response);
 
     }
