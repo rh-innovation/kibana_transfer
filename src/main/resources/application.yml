@@ -8,9 +8,6 @@ spring:
       NONE
 
 kibana_url_source:
-  local_local
 
-kibana:
-  url:
-    source:
-    dest:
+kibana_url_dest:
+

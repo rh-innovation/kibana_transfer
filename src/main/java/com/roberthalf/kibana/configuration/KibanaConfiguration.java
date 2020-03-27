@@ -30,7 +30,7 @@ public class KibanaConfiguration {
     String kibanaSrcUrl;
 
     //dev kibana 
-    @Value("${kibana.url.dest}")
+    @Value("${kibana_url_dest}")
     String kibanaDestUrl;
 
 
