@@ -4,7 +4,8 @@ server:
 
 spring:
   main:
-    web-application-type:NONE
+    web-application-type:
+      NONE
 
 kibana_url_source:
   local_local
@@ -12,6 +13,4 @@ kibana_url_source:
 kibana:
   url:
     source:
-      http://_localhost:8090/api/saved_objects/_export
     dest:
-      http://_localhost:8080/api/saved_objects/_import
