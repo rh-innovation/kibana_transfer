@@ -29,11 +29,16 @@ public class KibanaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		String kibanaSrc = env.getProperty("kibana_url_source");
+		//String kibanaSrc = env.getProperty("kibana_url_source");
 		String kibanaDest = env.getProperty("kibana_url_dest");
-		log.info("src:"+kibanaSrc);
+		//log.info("src:"+kibanaSrc);
 		log.info("dest:"+kibanaDest);
-	    transferObjects.transferIndexPattern(kibanaSrc, kibanaDest);
+        log.info("kibana_url_source:"+config.getKibanaSrcUrl());
+
+        transferObjects.transferIndexPattern(config.getKibanaSrcUrl(), kibanaDest);
 
 	}
+
+
+
 }
