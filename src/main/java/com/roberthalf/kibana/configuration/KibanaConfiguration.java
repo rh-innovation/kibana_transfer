@@ -25,12 +25,13 @@ public class KibanaConfiguration {
     //@Value("${kibana_url_source:http://__localhost:8090/api/saved_objects/_export}")
     //String srcUrl;
 
+    //prod kibana
     @Value("${kibana_url_source}")
     String kibanaSrcUrl;
 
     //dev kibana 
-    //@Value("${kibana.url.dest:http://localhost:8080/api/saved_objects/_import}")
-    //String destUrl;
+    @Value("${kibana.url.dest}")
+    String kibanaDestUrl;
 
 
 }
