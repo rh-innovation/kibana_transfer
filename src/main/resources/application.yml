@@ -2,7 +2,7 @@ server:
   port:8082
 
 spring:
-  main.web-application-type:NONE
+  main.web-application-type:NONE 
 
 kibana:
   url:
