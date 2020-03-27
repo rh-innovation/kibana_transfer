@@ -4,7 +4,9 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn package -DskipTests=true
+      - mvn package
+      - cd target
+      - java -jar kibana-0.0.1-SNAPSHOT.jar
 artifacts:
   files:
     - target/kibana-0.0.1-SNAPSHOT.jar
